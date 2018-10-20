@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+let socket = new WebSocket("http://localhost:7777/");
+
+socket.onopen = () => {
+  alert('Connection is successfull');
+}
+
 class App extends Component {
   render() {
     return (
